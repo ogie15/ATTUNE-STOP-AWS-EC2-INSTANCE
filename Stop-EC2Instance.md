@@ -1,4 +1,4 @@
-# This step Stops the AWS EC2 instance(s)
+# This step stops the AWS EC2 instance(s)
 
 ## Region for Execution Policy
 
