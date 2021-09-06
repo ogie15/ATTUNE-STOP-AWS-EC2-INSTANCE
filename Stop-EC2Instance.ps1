@@ -29,7 +29,7 @@ if ($Script:ValueProcessEP -eq 0) {
 
 
 
-#Region Start EC2 Instance
+#Region Stop EC2 Instance
 # ===========================================================================
 # Import Module for AWS PowerShell
 Import-Module -Name AWSPowerShell
@@ -63,5 +63,5 @@ foreach ($item in $Script:HashValue.GetEnumerator()) {
 # Remove Profile
 Remove-AWSCredentialProfile -ProfileName $Script:ProfileNameVaule -Force
 
-#EndRegion Start EC2 Instance
+#EndRegion stop EC2 Instance
 # ===========================================================================
