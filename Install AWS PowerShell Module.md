@@ -1,4 +1,4 @@
-# This step Installs the AWS PowerShell Module
+# This step installs the AWS PowerShell Module
 
 - *The script first gets the execution policy of the current PowerShell session.*
 - *Then checks if the execution policy is set  to Unrestricted.*
