@@ -1,5 +1,4 @@
 #Region for ExecutionPolicy
-# ===========================================================================
 # Get Execution Policy of the current process
 $Script:ProcessEP = Get-ExecutionPolicy -Scope Process
 
@@ -11,7 +10,7 @@ if ($Script:ValueProcessEP -eq 0) {
 
     # Write the message
     Write-Output "Execution Policy is already set to Unrestricted for the Process"
-# Check if the Execution Policy of the process is already set
+    # Check if the Execution Policy of the process is already set
 }else{
 
     # Set the ExecutionPolicy of the Process to Unrestricted
@@ -24,13 +23,11 @@ if ($Script:ValueProcessEP -eq 0) {
         Write-Output "Execution Policy is now set to Unrestricted for the Process"
     }
 }
-# ===========================================================================
 #EndRegion for ExecutionPolicy 
 
 
 
-#Region Stop EC2 Instance
-# ===========================================================================
+#Region for Shutting down EC2 Instance
 # Import Module for AWS PowerShell
 Import-Module -Name AWSPowerShell
 
@@ -44,7 +41,7 @@ $Script:SecretKeyValue = "{secretkey.value}"
 $Script:ProfileNameVaule = "DefaultSetKeys"
 
 # Hash Table of InstanceId with coressponding region pair
-$Script:HashValue = {hashvalue.value}
+$Script:HashValue = { hashvalue.value }
 
 # Set AWS Credentials
 Set-AWSCredential -AccessKey $Script:AccessKeyValue -SecretKey $Script:SecretKeyValue -StoreAs $Script:ProfileNameVaule
@@ -59,9 +56,6 @@ foreach ($item in $Script:HashValue.GetEnumerator()) {
     Stop-EC2Instance -InstanceId $($item.Name) -Region $($item.Value) -ProfileName $Script:ProfileNameVaule
 
 }
-
 # Remove Profile
 Remove-AWSCredentialProfile -ProfileName $Script:ProfileNameVaule -Force
-
-#EndRegion stop EC2 Instance
-# ===========================================================================
+#EndRegion for Shutting down EC2 Instance
