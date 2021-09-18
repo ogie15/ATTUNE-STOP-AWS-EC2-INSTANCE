@@ -41,7 +41,7 @@ $Script:SecretKeyValue = "{secretkey.value}"
 $Script:ProfileNameVaule = "DefaultSetKeys"
 
 # Hash Table of InstanceId with coressponding region pair
-$Script:HashValue = { hashvalue.value }
+$Script:HashValue = {hashvalue.value}
 
 # Set AWS Credentials
 Set-AWSCredential -AccessKey $Script:AccessKeyValue -SecretKey $Script:SecretKeyValue -StoreAs $Script:ProfileNameVaule
