@@ -1,6 +1,6 @@
 # Using Attune to shutdown AWS EC2 Instance
 
-This Blueprint is used for shutting down single or multiple AWS EC2 Instances
+This Blueprint is used for shutting down single or multiple AWS EC2 Instances.
 An EC2 instance is a virtual server in Amazon Web services.
 It stands for Elastic Compute Cloud.
 It is a web service where an AWS user can provision a compute server in the AWS cloud.
