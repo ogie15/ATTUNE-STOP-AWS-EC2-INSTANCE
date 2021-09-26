@@ -37,4 +37,4 @@ It is a web service where an AWS user can provision a compute server in the AWS 
 ## Blueprint Steps
 
 1. Check and Install the AWS PowerShell Module
-1. Shutdown the AWS EC2 Instance(s)
+1. Shuts down the AWS EC2 Instance(s)
